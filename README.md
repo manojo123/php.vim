@@ -11,16 +11,16 @@ Installation
 If you don't have a preferred installation method, [vim-plug] is quick and simple. With [vim-plug installed], add the following to your `vimrc` (if you are a NeoVim user, see the [FAQ page][neovim-faq] for help):
 
 ```vim
-Plug 'StanAngeloff/php.vim'
+Plug 'manojo123/php.vim'
 ```
 
 If you are using Git, please be aware [the original repository this project was forked from][php.vim-garvin] contains bad timezone in some of the commits. You'll need to fetch with `fsckObjects` disabled:
 
 ```sh
-git clone -c fetch.fsckObjects=false git@github.com:StanAngeloff/php.vim.git
+git clone -c fetch.fsckObjects=false git@github.com:manojo123/php.vim.git
 ```
 
-Unless you specify `-c fetch.fsckObjects=false` as an option to `git clone`, you may see `badTimezone: invalid author/committer line - bad time zone` in the output and the cloning will [fail](https://github.com/StanAngeloff/php.vim/issues/96).
+Unless you specify `-c fetch.fsckObjects=false` as an option to `git clone`, you may see `badTimezone: invalid author/committer line - bad time zone` in the output and the cloning will [fail](https://github.com/manojo123/php.vim/issues/96).
 
 Configuration
 -------------
@@ -99,7 +99,7 @@ You may add the code snippets below to your `PhpSyntaxOverride` function (see ab
 
 ##### Colourising namespace separator in `use`, `extends` and `implements`
 
-If you wish to highlight the namespace separator `\` differently ([original request](https://github.com/StanAngeloff/php.vim/issues/63)):
+If you wish to highlight the namespace separator `\` differently ([original request](https://github.com/manojo123/php.vim/issues/63)):
 
 ```vim
 hi phpUseNamespaceSeparator guifg=#808080 guibg=NONE gui=NONE
@@ -108,7 +108,7 @@ hi phpClassNamespaceSeparator guifg=#808080 guibg=NONE gui=NONE
 
 ##### Colourising parentheses
 
-If you wish to highlight `(` and `)` differently ([original request](https://github.com/StanAngeloff/php.vim/issues/31#issuecomment-52879108)):
+If you wish to highlight `(` and `)` differently ([original request](https://github.com/manojo123/php.vim/issues/31#issuecomment-52879108)):
 
 ```vim
 syn match phpParentOnly "[()]" contained containedin=phpParent
@@ -137,7 +137,7 @@ NOTE: If the updated syntax file fails to load and is corrupted, try loading `sy
   [vim-plug]: https://github.com/junegunn/vim-plug
   [vim-plug installed]: https://github.com/junegunn/vim-plug#installation
   [neovim-faq]: https://github.com/neovim/neovim/wiki/FAQ#where-should-i-put-my-config-vimrc
-  [php.vim-source]: https://github.com/StanAngeloff/php.vim/blob/master/syntax/php.vim#L35
+  [php.vim-source]: https://github.com/manojo123/php.vim/blob/master/syntax/php.vim#L35
   [Blade]: https://github.com/jwalton512/vim-blade
-  [syntax-groups]: https://github.com/StanAngeloff/php.vim/blob/41c36f7f/syntax/php.vim#L804
+  [syntax-groups]: https://github.com/manojo123/php.vim/blob/41c36f7f/syntax/php.vim#L804
   [Docker Hub]: https://docs.docker.com/samples/library/php/

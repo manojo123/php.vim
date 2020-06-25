@@ -542,7 +542,8 @@ syn keyword phpKeyword echo continue case default break return goto as endif end
 " Only create keyword groupings for these if not doing folding, otherwise they take precedence over the regions
 " used for folding.
 if php_folding != 1
-  syn keyword phpKeyword if else elseif while do for foreach function switch contained
+  syn keyword phpKeyword if else elseif while do for foreach switch contained
+  syn keyword phpKeywordFunction function contained
 
   " Exception Keywords
   syn keyword phpKeyword try catch finally throw contained
@@ -867,7 +868,7 @@ syn match phpUseAlias /as\_s\+\h\w*/ contained contains=phpUseKeyword
 syn match phpUseKeyword /\(function\|as\)\_s\+/ contained contains=phpKeyword
 
 " Function name
-syn keyword phpKeyword function contained
+syn keyword phpKeywordFunction function contained
       \ nextgroup=phpFunction skipwhite skipempty
 syn match phpFunction /\h\w*/ contained
 
@@ -881,7 +882,7 @@ syn keyword phpKeyword yield contained
 syn match phpYieldFromKeyword /\<from\>/ contained
 
 " Clusters
-syn cluster phpClConst contains=phpFunctions,phpClasses,phpStaticClasses,phpIdentifier,phpStatement,phpKeyword,phpOperator,phpSplatOperator,phpStringSingle,phpStringDouble,phpBacktick,phpNumber,phpType,phpNullValue,phpBoolean,phpStructure,phpMethodsVar,phpConstants,phpException,phpSuperglobals,phpMagicConstants,phpServerVars
+syn cluster phpClConst contains=phpFunctions,phpClasses,phpStaticClasses,phpIdentifier,phpStatement,phpKeyword,phpKeywordFunction,phpOperator,phpSplatOperator,phpStringSingle,phpStringDouble,phpBacktick,phpNumber,phpType,phpNullValue,phpBoolean,phpStructure,phpMethodsVar,phpConstants,phpException,phpSuperglobals,phpMagicConstants,phpServerVars
 syn cluster phpClInside contains=@phpClConst,phpComment,phpDocComment,phpParent,phpParentError,phpInclude,phpHereDoc,phpNowDoc
 syn cluster phpClFunction contains=@phpClInside,phpDefine,phpParentError,phpStorageClass,phpKeyword
 syn cluster phpClControl contains=phpFoldIfContainer,phpFoldWhile,phpFoldDoWhile,phpFoldFor,phpFoldForeach,phpFoldTryContainer,phpFoldSwitch
